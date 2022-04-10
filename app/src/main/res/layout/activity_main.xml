@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/logoo"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sistem Pengenalan Ucapan Manusia dengan menggunakan Google API pada Sistem Pakar Konseling Trauma pada Anak di Masa Pandemi"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/btnRekam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Suara ke teks"
+        />
+    <Button
+        android:id="@+id/btnTeks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="teks ke suara"
+        />
+    <Button
+        android:id="@+id/btnTentang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tentang"
+        />
+</LinearLayout>
