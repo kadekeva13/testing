@@ -41,7 +41,7 @@ Button btnRekam, btnTeks, btnTentang;
         });
     }
     public void BukaTentang(){
-        Intent BukaActTentang = new Intent(getApplicationContext(), TentangActivity.class);
+        Intent BukaActTentang = new Intent(getApplicationContext(), QuizActivity.class);
         startActivity(BukaActTentang);
     }
 
