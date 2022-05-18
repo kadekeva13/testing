@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgquiz"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Score :"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/question"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="Pertanyaan :"
+        app:layout_constraintBottom_toTopOf="@id/choice1"
+        app:layout_constraintTop_toBottomOf="@id/question" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice1"
+        android:text="A"
+        android:onClick="onClick"
+        app:layout_constraintTop_toBottomOf="@id/question"
+        app:layout_constraintBottom_toTopOf="@id/choice2"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice2"
+        android:text="B"
+        android:onClick="onClick"
+        app:layout_constraintTop_toBottomOf="@id/choice1"
+        app:layout_constraintBottom_toTopOf="@id/choice3"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice3"
+        android:text="C"
+        android:onClick="onClick"
+        app:layout_constraintTop_toBottomOf="@id/choice2"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jawab Pertanyaan ini sesuai dengan kondisi yang kalian rasakan"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/buttonMic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            style="@style/Widget.AppCompat.Button"
+            android:onClick="speak"
+            android:text="Jawab dengan suara"
+            android:drawableRight="@drawable/ic_mic" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

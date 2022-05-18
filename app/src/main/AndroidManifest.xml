@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".InformasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionBank"
+            android:exported="false" />
+        <activity
+            android:name=".HighestScoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".TekstospeechActivity"
             android:exported="false" />
         <activity

@@ -8,28 +8,28 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-Button btnRekam, btnTeks, btnTentang;
+Button btnRekam, btnInformasi, btnTentang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnRekam = (Button) findViewById(R.id.btnRekam);
         btnTentang = (Button) findViewById(R.id.btnTentang);
-        btnTeks = (Button) findViewById(R.id.btnTeks);
+        btnInformasi = (Button) findViewById(R.id.btnInformasi);
 
         btnRekam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent BukaActMulai = new Intent(getApplicationContext(), MulaiActivity.class);
+                Intent BukaActMulai = new Intent(getApplicationContext(), QuizActivity.class);
                 startActivity(BukaActMulai);
             }
         });
 
-        btnTeks.setOnClickListener(new View.OnClickListener() {
+        btnInformasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent BukaActTeks = new Intent(getApplicationContext(), TekstospeechActivity.class);
-                startActivity(BukaActTeks);
+                Intent BukaActInfo = new Intent(getApplicationContext(), InformasiActivity.class);
+                startActivity(BukaActInfo);
             }
         });
 
