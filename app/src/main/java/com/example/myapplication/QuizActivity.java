@@ -102,6 +102,8 @@ public class QuizActivity extends AppCompatActivity {
             mButtonChoice2.setText(mQuestionLibrary.getChoice(mQuestionNumber, 2));
             mButtonChoice3.setText(mQuestionLibrary.getChoice(mQuestionNumber, 3));
 
+            buttonMic.setText("Jawab dengan suara");
+
             mAnswer = mQuestionLibrary.getCorrectionAnswer(mQuestionNumber);
             mQuestionNumber++;
         } else {
@@ -178,11 +180,25 @@ public class QuizActivity extends AppCompatActivity {
 
         if (requestCode == 100 && resultCode == RESULT_OK) {
             buttonMic.setText(data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS).get(0));
+
+            String dataString = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS).get(0).toUpperCase();
+
             Log.d("Katakan Sesuatu..:",data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS).get(0).toString().toUpperCase());
             for(int i =1;i<toSpeak.length;i++){
                 Log.d("Jawaban Sesuatu..:",toSpeak[i].toUpperCase());
+
                 if (toSpeak[i].toUpperCase().equals(data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS).get(0).toString().toUpperCase())) {
-                    mScore++;updateScore(mScore);updateQuestion();
+
+                    Log.d("mAnswer", mAnswer);
+                    if (dataString.toUpperCase().equals(mAnswer.toUpperCase())) {
+                        mScore++;
+                        Toast.makeText(QuizActivity.this, "Sip!", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(QuizActivity.this, "Mantap!", Toast.LENGTH_SHORT).show();
+                    }
+
+                    updateScore(mScore);
+                    updateQuestion();
                 }
             }
         }

@@ -10,28 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-<<<<<<< HEAD
             android:name=".Jangandiisi"
             android:exported="false" />
         <activity
             android:name=".InformasiActivity"
-=======
-            android:name=".HighestScoreActivity"
->>>>>>> origin/master
             android:exported="false" />
         <activity
             android:name=".QuizActivity"
             android:exported="false" />
-        <activity
-<<<<<<< HEAD
-            android:name=".QuestionBank"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".QuestionBank"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".HighestScoreActivity"
             android:exported="false" />
         <activity
-=======
->>>>>>> origin/master
             android:name=".TekstospeechActivity"
             android:exported="false" />
         <activity
